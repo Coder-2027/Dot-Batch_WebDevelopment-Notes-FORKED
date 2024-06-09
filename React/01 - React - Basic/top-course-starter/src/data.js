@@ -1,4 +1,4 @@
-export const filterData = [
+export const filterData = [                    //see the export written here and at the last line
   {
     id: "1",
     title: "All",
