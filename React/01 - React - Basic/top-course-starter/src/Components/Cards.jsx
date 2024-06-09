@@ -9,15 +9,15 @@ const Cards = (props) => {
     const [likedCourses, setLikedCourses] = useState([]);
     //   let allCourse = [];
 
-    // It Returns list of all courses received from the api Response
+    // It Returns list of all courses received from the api Response (here courses is an object we are converting it into an array)
 
     // const getCourses = () => {
-    //     Object.values(props.courses).forEach((courseCategory) => {
+    //     Object.values(props.courses).forEach((courseCategory) => {                            Object.values -> means from object containing key value pairs we are taking only values terms
     //         courseCategory.forEach((course) => {
-    //             allCourse.push(course);
+    //             allCourse.push(course);                                                    //******
     //         });
     //     });
-    //     return allCourse;
+    //     return allCourse;                                                                    //******
     // };
 
     function getCourses() {
