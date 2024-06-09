@@ -1,5 +1,5 @@
 import { click } from '@testing-library/user-event/dist/click';
-import { FcLike, FcLikePlaceholder } from 'react-icons/fc';
+import { FcLike, FcLikePlaceholder } from 'react-icons/fc';                        //Google - importing heart icon
 import { toast } from 'react-toastify';
 
 const Card = (props) => {
