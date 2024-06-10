@@ -11,12 +11,12 @@ const App = () => {
   // const [courses, setCourses] = useState(null);            due to this when courses was being passed in line 52 then it was being passed as null since data processing took time
   const [courses, setCourses] = useState([]);                        //******
   const [laoding, setLoading] = useState(true);
-  const [category, setCategory] = useState([]);
+  const [category, setCategory] = useState([]);                //here category variable was for holding which filter button is clicked on basis of which we would be changinf number and type of card being displayed
 
   const fetchData = async () => {
     setLoading(true);
     try {
-      const res = await fetch(apiUrl);
+      const res = await fetch(apiUrl);                  //fetching info to be displayed in card
       const output = await res.json();
 
       // Save data
