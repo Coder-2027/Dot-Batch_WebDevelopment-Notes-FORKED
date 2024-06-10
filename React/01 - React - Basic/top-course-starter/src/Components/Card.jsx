@@ -10,6 +10,9 @@ const Card = (props) => {
         // Logic
         if (likedCourses.includes(props.course.id)) {
             // pahle se liked 
+            if(prev.length === 1){                            //else it was giving error since after emptying it completely we were getting liked as undefined
+                    return [];
+            }
             setLikedCourses((prev) => prev.filter((cid) => cid !== props.course.id));                //removed this element from the list of liked courses, here prev indicates previous state (value) of our list (array) here prev is a keyword
             toast.warning("Liked Removed");
         }
