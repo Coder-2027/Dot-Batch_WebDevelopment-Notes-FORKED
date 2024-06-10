@@ -10,7 +10,7 @@ const Card = (props) => {
         // Logic
         if (likedCourses.includes(props.course.id)) {
             // pahle se liked 
-            setLikedCourses((prev) => prev.filter((cid) => cid !== props.course.id));
+            setLikedCourses((prev) => prev.filter((cid) => cid !== props.course.id));                //removed this element from the list of liked courses, here prev indicates previous state (value) of our list (array) here prev is a keyword
             toast.warning("Liked Removed");
         }
         else {
@@ -20,7 +20,7 @@ const Card = (props) => {
                 setLikedCourses([props.course.id]);
             }
             else {
-                setLikedCourses((prev) => [...prev, props.course.id]);
+                setLikedCourses((prev) => [...prev, props.course.id]);                                //*****
             }
             toast.success("Liked Successfully");
         }
@@ -46,7 +46,7 @@ const Card = (props) => {
                 <p className='text-white text-lg font-semibold leading-6'>{props.course.title}</p>
                 <p className='mt-2 text-white'>
                     {
-                        props.course.description.length > 100 ? (props.course.description.substring(0, 100) + "...") : (props.course.description)
+                        props.course.description.length > 100 ? (props.course.description.substring(0, 100) + "...") : (props.course.description)            //*****
                     }
 
                 </p>
