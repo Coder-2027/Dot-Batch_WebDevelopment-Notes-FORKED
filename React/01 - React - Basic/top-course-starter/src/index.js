@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import { ToastContainer } from "react-toastify";                //is added to add toast (side mein appear hone waali pop ups) search on google
+import { ToastContainer } from "react-toastify";                //is added to add toast (side mein appear hone waali pop ups) search on google            here we are importing a container
 import "react-toastify/dist/ReactToastify.css";                  //Google
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
