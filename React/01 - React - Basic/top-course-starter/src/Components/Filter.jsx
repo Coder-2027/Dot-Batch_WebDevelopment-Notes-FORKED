@@ -16,7 +16,7 @@ const Filter = (props) => {
           <button
             className={`text-lg px-2 py-1 rounded-md font-medium text-white bg-black border-2 hover:bg-opacity-50 transition-all duration-200
               ${
-                category === data.title
+                category === data.title                                //*****              in css file can we do for .btn:focus??
                   ? "bg-opacity-60 border-white"
                   : "bg-opacity-40 border-transparent"
               }
