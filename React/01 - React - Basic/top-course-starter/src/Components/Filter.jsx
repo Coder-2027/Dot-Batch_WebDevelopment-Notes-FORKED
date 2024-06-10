@@ -4,7 +4,7 @@ const Filter = (props) => {
   // console.log(props);
   let category = props.category;
   let setCategory = props.setCategory;
-
+                                                          //in case of callback function when () => (when used this bracket then it automatically implies returing this value), {whereas if this bracket is used then we need to use return keyword}
   function filterHandler(title) {
     setCategory(title);
   }
