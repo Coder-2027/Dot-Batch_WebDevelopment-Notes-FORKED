@@ -39,7 +39,7 @@ const Cards = (props) => {
     //   console.log(allCourse);
     return (
         <div className="flex flex-wrap justify-center gap-4 mb-4">
-            {
+            {                                    //here this bracket is important else it would directly try to print without processing it
                 getCourses().map((course) => {
                     return <Card course={course} key={props.courses.id} likedCourses={likedCourses} setLikedCourses={setLikedCourses} />;
                 })
