@@ -17,7 +17,7 @@ const Card = (props) => {
             // pahle se like nahi hai course 
             // insert karne h y course like course me 
             if (likedCourses.length === 0) {
-                setLikedCourses([props.course.id]);
+                setLikedCourses([props.course.id]);                            //*****        square brackets
             }
             else {
                 setLikedCourses((prev) => [...prev, props.course.id]);                                //*****
