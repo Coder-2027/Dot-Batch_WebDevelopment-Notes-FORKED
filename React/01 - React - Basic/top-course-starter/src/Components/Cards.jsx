@@ -32,7 +32,7 @@ const Cards = (props) => {
         }
         else
         {
-            return props.courses[category];
+            return props.courses[category];                            //because in object (category) we have key value pairs of which key is the category being searched for
         }
     }
 
