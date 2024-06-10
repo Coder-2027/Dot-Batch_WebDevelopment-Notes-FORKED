@@ -9,7 +9,7 @@ const Testimonial = (props) => {
 
   function leftShiftHandler() {
     if (index - 1 < 0) {
-      setIndex(reviews.length - 1);
+      setIndex(reviews.length - 1);                    //for implementing circular logic
     } else {
       setIndex(index - 1);
     }
