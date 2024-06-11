@@ -2,9 +2,9 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState(          {            //using curly braces to store an object inside form Data.
     firstName: "",
-    lastName: "",
+    lastName: "",                                                  //Handling multiple states here
     email: "",
     country: "India",
     streetAddress: "",
