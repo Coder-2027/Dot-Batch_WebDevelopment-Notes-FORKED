@@ -16,7 +16,7 @@ const Template = ({ title, desc1, desc2, image, formType, setIsLoggedIn }) => {
 
         {formType === "signup" ? <SignupForm setIsLoggedIn={setIsLoggedIn} /> : <LoginForm setIsLoggedIn={setIsLoggedIn} />}
 
-        <div className="flex w-full items-center my-4 gap-x-2">
+         <div className="flex w-full items-center my-4 gap-x-2">                     {/* this part is for creating -----OR------ */}
           <div className="h-[1px] w-full bg-richblack-700"></div>
           <p className="text-richblack-700 font-medium leading-[1.375rem]">OR</p>
           <div className="h-[1px] w-full bg-richblack-700"></div>
