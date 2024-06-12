@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navigate } from 'react-router-dom';
 
-const PrivateRoute = ({ children, isLoggedIn }) => {
+const PrivateRoute = ({ children, isLoggedIn }) => {                        //automatically receives children class here children is dashboard...
     if (isLoggedIn) {
         return children;
     }
