@@ -9,7 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import React, { useState } from "react";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);                  //is used two places 1)for deciding which button to display 2)for displaying dashboard screen
   return (
     <div className="w-screen h-screen bg-richblack-900 flex flex-col ">
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
