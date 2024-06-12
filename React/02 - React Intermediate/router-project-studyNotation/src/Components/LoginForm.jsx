@@ -39,7 +39,7 @@ const LoginForm = (props) => {
             onSubmit={submitHandler}
             className="flex flex-col w-full gap-y-4 mt-6"
         >
-            <label className="w-full">
+            <label className="w-full">                                    {/*  using label this way helps in automatically integerating p tag with input tag */}
                 <p className="text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
                     Email Address
                     <sup className="text-pink-200">*</sup>
@@ -47,7 +47,7 @@ const LoginForm = (props) => {
 
                 <input
                     type="email"
-                    required
+                     required                                                    {/*     ***** */}
                     value={formData.email}
                     placeholder="Enter your email address"
                     onChange={changeHandler}
