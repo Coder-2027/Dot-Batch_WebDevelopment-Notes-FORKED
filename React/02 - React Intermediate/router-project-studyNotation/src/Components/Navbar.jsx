@@ -29,7 +29,7 @@ const Navbar = (props) => {
       {/* Button - Login = Signup = Logout = Dashboard  */}
 
       <div className="flex items-center gap-x-4 text-richblack-100">
-        {!isLoggedIn && (
+        {!isLoggedIn && (                //Condition applied using curly braces
           <Link to="/login">
             <button className="bg-richblack-800 py-[8px] px-[12px] rounded-[8px] border border-richblack-700">
               Login
