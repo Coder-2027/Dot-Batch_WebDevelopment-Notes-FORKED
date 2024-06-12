@@ -13,7 +13,8 @@ function App() {
   return (
     <div className="w-screen h-screen bg-richblack-900 flex flex-col ">
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-      <Routes>                          //All the paths to be displayed on main screen are written here in navbar section we have linked thesw route like linked login button with /login
+    //we have 4 windows to be displayed in homescreen
+      <Routes>                          //////All the paths to be displayed on main screen are written here in navbar section we have linked thesw route like linked login button with /login
         <Route path="/" element={<Home />} />
         <Route
           path="/login"
