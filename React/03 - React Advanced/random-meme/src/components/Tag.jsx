@@ -11,7 +11,7 @@ const Tag = () => {
 
   // async function fetchData() {
   //   setLoading(true)
-  //   const url = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=${tag}`;
+  //   const url = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=${tag}`;                  //here our url supports this that is why we are able to do this
 
   //   const { data } = await axios.get(url);
   //   const imageSource = data.data.images.downsized_large.url;
