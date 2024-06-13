@@ -27,6 +27,11 @@ function App() {
         <PrivateRoute isLoggedIn={isLoggedIn}>         // making it private because on typing /dashboard we should not be reaching dashboard if we have not logged in
           //one more point when we type '/dashboard' or anything on url then html page loads once again...
             //so even if we have logged in ,if we agin click on home and then type '/dashboard' then html page will load again and hence we would be logged out...
+
+
+                                                            //ERROR
+            // it is showing error that we cannot use PrivateRoute inside Route              ?????????????
+
             
             <Route path="/dashboard" element={<Dashboard />} />
         </PrivateRoute>
