@@ -12,7 +12,7 @@ const useGif = (tag) => {                          //on basis of tag we will dec
   const [gif, setGif] = useState('');
   const [loading, setLoading] = useState(false);
 
-  async function fetchData(tag) {
+  async function fetchData(tag) {                        //we are supplying tag variable here also because it is also being called exclusively
     setLoading(true);
     
     const {data} = await axios.get(tag ? `${url}&tag=${tag}`  : url);
