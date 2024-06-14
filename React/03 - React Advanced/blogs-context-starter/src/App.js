@@ -6,7 +6,7 @@ import { AppContext } from './Context/AppContext';
 
 
 export const App = () => {
-  const {fetchBlogPosts} = useContext(AppContext);
+  const {fetchBlogPosts} = useContext(AppContext);                    //using this to access fetchBlogPosts
 
   useEffect(() => {
     fetchBlogPosts();
