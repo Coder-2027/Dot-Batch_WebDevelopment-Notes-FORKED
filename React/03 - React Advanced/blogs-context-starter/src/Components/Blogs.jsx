@@ -15,7 +15,7 @@ const Blogs = () => {
                     <p className="">No Post Found</p>
                 </div>
             ) : (
-                posts.map((post) => {
+                posts.map((post) => {                            //here posts is indicating a particular card
                     return <div key={post.id} className="">
                         <p className="font-bold text-sm ">{post.title}</p>
                         <p className="text-[14px]">
@@ -25,7 +25,7 @@ const Blogs = () => {
                         <p className="text-[14px]">Posted on {post.date}</p>
                         <p className="text-[16px] mt-[13px]">{post.content}</p>
                         <div className="flex flex-wrap gap-x-2 items-center">
-                            {post.tags.map((tag, index) => {
+                            {post.tags.map((tag, index) => {                                       //index is the unique key
                                 return <span key={index} className="text-xs font-semibold underline text-blue-700 cursor-pointer">#{tag}</span>;
                             })}
                         </div>
