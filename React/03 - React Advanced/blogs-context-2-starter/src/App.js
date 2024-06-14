@@ -11,7 +11,7 @@ import { Routes, Route, useSearchParams, useLocation } from "react-router-dom";
 
 export default function App() {
   const { fetchBlogPosts } = useContext(AppContext);
-  const [searchParams,setSearchParams] = useSearchParams();
+  const [searchParams,setSearchParams] = useSearchParams();          
   const location = useLocation();
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/blog/:blogId" element={<BlogPage /> } />
+      <Route path="/blog/:blogId" element={<BlogPage /> } />                        //:blogId is a dynamic parameter  blog ke aage kuch bhi likha hoga use blogid maan liya jaayga
       <Route path="/tags/:tag" element={<TagPage />} />
       <Route path="/categories/:category" element={<CategoryPage />} />
     </Routes>
