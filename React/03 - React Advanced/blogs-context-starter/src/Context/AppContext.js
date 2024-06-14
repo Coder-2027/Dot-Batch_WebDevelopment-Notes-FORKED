@@ -2,9 +2,9 @@ import { createContext, useState } from "react";
 import { baseUrl } from "../baseUrl";
 
 // Step1
-export const AppContext = createContext();
+export const AppContext = createContext();                    //creation of context exporting it because we will be using this name to access this function
 
-function AppContextProvider({ children }) {
+function AppContextProvider({ children }) {                    //creating provider and then applying it on component (here in our case we will apply it on APP component) see App.jsx
     const [loading, setLoading] = useState(false);
     const [posts, setPosts] = useState([])
     const [page, setPage] = useState(1)
@@ -38,7 +38,7 @@ function AppContextProvider({ children }) {
     }
 
 
-    const value = {
+    const value = {                            //object having required data to be transferred
         posts,
         setPosts,
         page,
@@ -51,7 +51,7 @@ function AppContextProvider({ children }) {
         fetchBlogPosts
     };
 
-    return <AppContext.Provider value={value}>
+    return <AppContext.Provider value={value}>                        //syntax {Providing value that exist in appcontext to the children}
         {children}
     </AppContext.Provider>
 }
