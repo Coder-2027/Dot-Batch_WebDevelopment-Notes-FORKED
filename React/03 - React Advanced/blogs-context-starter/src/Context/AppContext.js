@@ -3,6 +3,7 @@ import { baseUrl } from "../baseUrl";
 
 // Step1
 export const AppContext = createContext();                    //creation of context exporting it because we will be using this name to access this function
+// we export it becuase it will be used by useContext function to access this particular context
 
 function AppContextProvider({ children }) {                    //creating provider and then applying it on component (here in our case we will apply it on APP component) see App.jsx
     const [loading, setLoading] = useState(false);
