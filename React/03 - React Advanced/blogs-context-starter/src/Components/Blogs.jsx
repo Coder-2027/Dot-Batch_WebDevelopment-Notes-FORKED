@@ -4,7 +4,8 @@ import { AppContext } from "../Context/AppContext";
 
 const Blogs = () => {
     // Consume
-    const { posts, loading } = useContext(AppContext);
+    const { posts, loading } = useContext(AppContext);                //we pass here a context becuase it is possible that we have made many context api
+    // now inorder to cal a particular context we pass context object
     console.log(posts);
     return (
         <div className="max-w-[620px] w-11/12 py-3 flex flex-col gap-y-7 my-[100px]">
