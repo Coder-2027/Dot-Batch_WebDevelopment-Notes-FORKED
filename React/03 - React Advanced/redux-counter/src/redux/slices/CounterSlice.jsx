@@ -1,14 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
+const initialState = {                                
     value:0,
 }
 
-export const CounterSlice = createSlice({
+export const CounterSlice = createSlice({                            //inside this we send an object containing three keys
     name:"counter",
     initialState,
-    reducers: {
-        increment : (state) => {
+    reducers: {                                                //inside this we define functionalities of our application
+        increment : (state) => {                                             //here state is our current state
             state.value += 1;
         },
         decrement: (state) => {
@@ -17,5 +17,11 @@ export const CounterSlice = createSlice({
     }
 })
 
-export const {increment, decrement} = CounterSlice.actions;
+export const {increment, decrement} = CounterSlice.actions;            //all the functionalities that we are using we need to export thrm
+//here counterslice ke action waali implementation se humne functionalities bahar nikaal li
+// to get implementation of all functions from our sllice
+
+                            // here createSlice waala function gives an object in return containing two key value pairs
+//                        1.actions
+//                        2.reducer
 export default CounterSlice.reducer;
