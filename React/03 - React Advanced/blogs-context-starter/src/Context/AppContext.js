@@ -54,6 +54,13 @@ function AppContextProvider({ children }) {                    //creating provid
     return <AppContext.Provider value={value}>                        //syntax {Providing value that exist in appcontext to the children}
         {children}
     </AppContext.Provider>
+//     The createContext function in React returns a context object that includes two components:
+
+// Provider Component: This component is used to set the value of the context and pass it down to any descendants in the component tree. Any component that wants to consume the context must be a descendant of this Provider component.
+// consumer component
+
+//     MyContext.Provider is the provider component you would use to wrap a part of your component tree where you want the context to be accessible.
+// MyContext.Consumer is the consumer component you would use in class components to read the context value.
 }
 
 export default AppContextProvider;
