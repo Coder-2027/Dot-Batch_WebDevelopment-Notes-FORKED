@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
-import CounterSlice from './slices/CounterSlice'
+import CounterSlice from './slices/CounterSlice'            //here in the name of counterSlice we have got counterSlice.reducer() because we have exported it from there
+// if we have exported 
 
 export const store = configureStore({          //it creates a global store containing all slices
   reducer: {
