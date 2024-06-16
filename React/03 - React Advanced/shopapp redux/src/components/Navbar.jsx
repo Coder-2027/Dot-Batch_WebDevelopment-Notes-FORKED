@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
-  const {cart} = useSelector((state) => state);
+  const {cart} = useSelector((state) => state);                //when there is only one element in reducer of store then it becomes root reducer
 
   return (
     <div >
