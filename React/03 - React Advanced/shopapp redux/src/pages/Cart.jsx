@@ -9,8 +9,9 @@ const Cart = () => {
   console.log(cart);
   const [totalAmount, setTotalAmount] = useState(0);
 
-  useEffect(() => {
-    setTotalAmount(cart.reduce((acc, curr) => acc + curr.price, 0));
+  useEffect(() => {                                  //*****IMP*****
+    //                  everytime when data inside cart changes then this will execute
+    setTotalAmount(cart.reduce((acc, curr) => acc + curr.price, 0));                  //here curr is an object containing various parameters of which we are accessing price
   }, [cart]);
 
   return (
