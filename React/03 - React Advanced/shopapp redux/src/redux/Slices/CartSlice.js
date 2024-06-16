@@ -5,7 +5,7 @@ export const CartSlice = createSlice({
     name:"cart",
     initialState:[],
     reducers:{
-        add:(state,action) => {
+        add:(state,action) => {                                //state refers to initial state which is an array
             state.push(action.payload);
         },
         remove:(state,action) => {
