@@ -8,7 +8,7 @@ const { updateTodo} = require("../controllers/updateTodo");
 const { deleteTodo} = require("../controllers/deleteTodo");
 
 //define APi routes
-router.post("/createTodo", createTodo);
+router.post("/createTodo", createTodo);                  //mapping the path with controller
 router.get("/getTodos", getTodos);
 router.get("/getTodos/:id", getTodoById);
 router.put("/updateTodo/:id", updateTodo);
