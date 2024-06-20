@@ -25,4 +25,4 @@ const todoSchema = new mongoose.Schema(
     }
 );
 
-module.exports = mongoose.model("Todo", todoSchema);
+module.exports = mongoose.model("Todo", todoSchema);                    //exporting above function with the name Todo that is in other files it would be used with the name Todo
