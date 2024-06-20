@@ -3,10 +3,10 @@ const app = express();
 
 //load config from env file
 require("dotenv").config();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;                  //either port number will come from .env file and if it doesnt come then we will use port 3000
 
 //middleware to parse json request body
-app.use(express.json());
+app.use(express.json());                          //another syntax for body parser
 
 //import routes for TODO API
 const todoRoutes = require("./routes/todos");
