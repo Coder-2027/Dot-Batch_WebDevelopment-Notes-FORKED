@@ -8,7 +8,7 @@ exports.updateTodo = async(req,res) => {
         const {id} = req.params;
         const {title,description} = req.body;
 
-        const todo = await Todo.findByIdAndUpdate(
+        const todo = await Todo.findByIdAndUpdate(            //here we supplied two objects via first we will find our id and via second we will be updating 
             {
                 _id : id,
             },
