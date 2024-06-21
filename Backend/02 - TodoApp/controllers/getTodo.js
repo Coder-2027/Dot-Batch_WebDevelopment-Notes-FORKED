@@ -6,7 +6,7 @@ const Todo = require("../models/Todo");
 exports.getTodos = async (req, res) => {
   try {
     // fetch all todo items from database
-    const todos = await Todo.find({});
+    const todos = await Todo.find({});                        //mongoose library provide various functions like find in this case which is being applied to todo model
 
     // Response
     res.status(200).json({
