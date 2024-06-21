@@ -25,6 +25,8 @@ app.listen(PORT, () => {
 const dbConnect = require("./config/database");
 dbConnect();
 
+//then after this put data in postman and then send to the database, then check in mongo compass
+
 //default Route
 app.get("/", (req, res) => {
   res.send(`<h1> This is HOMEPAGE baby</h1>`);
