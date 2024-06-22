@@ -11,7 +11,7 @@ exports.likePost = async (req, res) => {
       post,
       user,
     });
-    const savedLike = await like.save();
+    const savedLike = await like.save();                                  //due to this a new folder named Like gets created here which contains info about all the likes
 
     // Update Post Collection basis on this
     const updatedPost = await Post.findByIdAndUpdate(
@@ -38,7 +38,8 @@ exports.unlikePost = async (req, res) => {
     const { post, like } = req.body;
 
     // find and delete the from like collection
-    const deletedLike = await Like.findOneAndDelete({ post: post, _id: like });
+    const deletedLike = await Like.findOneAndDelete({ post: post, _id: like });            //here we are passing two parameters which means if both the 
+    // condition are satisfied then only it will select only that object
 
     // update the post collection
     const updatedPost = await Post.findByIdAndUpdate(
