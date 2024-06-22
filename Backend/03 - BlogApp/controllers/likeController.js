@@ -11,7 +11,9 @@ exports.likePost = async (req, res) => {
       post,
       user,
     });
-    const savedLike = await like.save();                                  //due to this a new folder named Like gets created here which contains info about all the likes
+    const savedLike = await like.save();                                  
+    // To create a new folder (or collection) in MongoDB using Mongoose, you typically define a new schema and model for the collection.
+    // Mongoose will automatically create the collection when you save a document using this model.
 
     // Update Post Collection basis on this
     const updatedPost = await Post.findByIdAndUpdate(
