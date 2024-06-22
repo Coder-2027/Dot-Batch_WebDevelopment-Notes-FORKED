@@ -1,5 +1,5 @@
 // import model 
-const Post = require("../models/postModel");
+const Post = require("../models/postModel");                                                        //here we are creating 3 controllers because we want to interact with 3 of them
 const Comment = require("../models/commentModel");
 const { response } = require("express");
 
