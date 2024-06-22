@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 // Route Handler 
 const commentSchema = new mongoose.Schema({
     post:{
-        type:mongoose.Schema.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,                            //id of post, konsi post par like kar rahe ho
         ref : "Post" //reference to the post model
     },
     user: {
