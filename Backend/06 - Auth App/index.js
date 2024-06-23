@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(cookieParser());
 
-require("./config/database").connect()
+require("./config/database").connect()                                //importing connect function from the mentioned path
 
 // route import and mount 
 const user = require("./routes/user");
