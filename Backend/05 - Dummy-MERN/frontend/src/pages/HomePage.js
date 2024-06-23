@@ -28,7 +28,7 @@ const HomePage = () => {
   const getAllData = async () => {
     try {
       const getPeople = await fetch(
-        `${process.env.REACT_APP_BASE_URL}/getallUsers`,
+        `${process.env.REACT_APP_BASE_URL}/getallUsers`,              //this api call goes to backend and specifically to the route folder
         {
           method: "GET",
           headers: {
@@ -44,7 +44,7 @@ const HomePage = () => {
     }
   };
 
-  useEffect(() => {
+  useEffect(() => {                        //as soon as the page loads then we       call getAllData which will interact with the api that is mapped with backend
     getAllData();
   },[]);
   console.log(empData);
