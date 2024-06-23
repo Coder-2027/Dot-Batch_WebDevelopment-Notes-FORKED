@@ -5,6 +5,8 @@ const userSchema = new mongoose.Schema({                  //here schema is creat
     type: String,
     require: true,
     trim: true,
+    // In the context of a Mongoose schema, the trim: true option is used to automatically remove any leading and trailing whitespace
+    // from the string before it is saved to the database. This ensures that the stored value does not have any unnecessary spaces at the beginning or end.
   },
   email: {
     type: String,
@@ -17,7 +19,7 @@ const userSchema = new mongoose.Schema({                  //here schema is creat
   },
   role: {
     type: String,
-    enum: ["Admin", "Student", "Visitor"],
+    enum: ["Admin", "Student", "Visitor"],                    //this means that we are defining range of values that this parameter can take
   },
 });
 
