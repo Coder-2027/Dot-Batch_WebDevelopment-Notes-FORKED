@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');                                        //used to encrypt our data depending on some algo
 const User = require("../Models/User");
 const jwt = require("jsonwebtoken")
 
@@ -23,7 +23,8 @@ exports.signup = async (req, res) => {
         // Secured password 
         let hashedPassword;
         try {
-            hashedPassword = await bcrypt.hash(password, 10);
+            hashedPassword = await bcrypt.hash(password, 10);                        //here second parameter of hash is used to tell how many times we need to run 
+            // our function for encrypting
         }
         catch (err) {
             return res.status(500).json({
