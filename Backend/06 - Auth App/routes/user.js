@@ -38,7 +38,7 @@ router.get("/getEmail", auth, async (req, res) => {
     try{    
         const id = req.user.id;
         console.log(id)
-        const user = await User.findOne({_id:id});
+        const user = await User.findOne({_id:id});        //or using findById(id)
 
         res.status(200).json({
             success : true,
