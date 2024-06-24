@@ -15,7 +15,14 @@ exports.auth = (req, res, next) => {                        //next is for callin
         // const token = req.body.token;
         // const token = req.cookie.token 
         const token = req.body.token || req.cookies.token || req.header("Authorization").replace("Bearer ", "");                //we have 3 ways for taking out token
+                                                    //here sending data via header is more secured comparitively
+         // req.cookies.token  -> would fail if cookie parser wasnt added
 
+        // req.header("Authorization").replace("Bearer ", ""); -> we need to follow exact syntax after Bearer we need to put a space
+        // here Authorization is a key and Bearer is a value
+        // "Authorization : Bearer <token>"                while writing above syntax we find value for authorization which gives Bearer <token> now on replacing 
+        // it by an empty string we are left with <token> , one more point to be noted this key value pair is present in header
+        
         if(!token || token === undefined) {
             return res.status(401).json({
                 success:false,
@@ -89,3 +96,6 @@ exports.isAdmin = (req, res, next) => {
         })
     }
 }
+
+//cookie hijacking and token hijacking
+// cookie is stored in client side , whereas session is stored in server side both store info about user
