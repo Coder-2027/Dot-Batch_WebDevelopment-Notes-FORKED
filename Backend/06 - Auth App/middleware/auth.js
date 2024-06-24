@@ -1,5 +1,8 @@
 const jwt = require("jsonwebtoken")
 require("dotenv").config();
+//middleware are functions which are invoked by intercepting the request call, that is when the call is going to towards server then in middle there occurs a 
+// middleware for example if a student is trying to peek in the details which is only accesible to admin then in that case middleware occurs and does authorization
+//so it intercepts in middle
 
 
 exports.auth = (req, res, next) => {
