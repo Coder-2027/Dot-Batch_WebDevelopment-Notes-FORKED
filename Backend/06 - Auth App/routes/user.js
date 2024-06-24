@@ -17,7 +17,9 @@ router.get("/test", auth, (req, res) => {
 })
 
 // Protected Route for Student
-router.get("/student", auth, isStudent, (req, res) => {
+router.get("/student", auth, isStudent, (req, res) => {                            //whether the route is protexted or not is identified by middleware, always 
+    // handler is present at last, these middleware are xecuted in the same order as written here
+                                                            // token ke payload mein role present hai
     res.json({
         success: true,
         message: "Welcome to Protected Route for Student"
