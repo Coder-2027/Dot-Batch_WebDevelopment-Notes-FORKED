@@ -2,7 +2,7 @@ const bcrypt = require('bcrypt');                                        //used 
 const User = require("../Models/User");
 const jwt = require("jsonwebtoken")
 
-require("dotenv").config()
+require("dotenv").config()         
 
 // Sign up route handler
 exports.signup = async (req, res) => {
