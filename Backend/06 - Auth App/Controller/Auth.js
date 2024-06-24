@@ -67,7 +67,7 @@ exports.login = async (req,res) => {
         }
 
         // check for register user 
-        let user = await User.findOne({email});
+        let user = await User.findOne({email});                                    //it will return an object containing email and password
         if(!user)
         {
             return res.status(401).json({
@@ -85,19 +85,20 @@ exports.login = async (req,res) => {
         };
 
 
-        if(await bcrypt.compare(password,user.password)){
+        if(await bcrypt.compare(password,user.password)){                    //first we will becrypt the password contained in password and then compare it with 
+            // user.password                                used an await because here we would be hashing our passord first
             // password match
             let token = jwt.sign(payload,process.env.JWT_SECRET,{
-                expiresIn : "2h",
+                expiresIn : "2h",                //this is an option, which tells when this jwt token will expire
             });
 
-            user = user.toObject();
-            user.token = token;
-            user.password = undefined;
+            user = user.toObject();                            //explicitly converted it to object else it was not creating a new key named token inside it BUT WHY??
+            user.token = token;                        
+            user.password = undefined;                    //doing this becuase we will be sending this object in response
 
             const options = {
-                expires : new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
-                httpOnly : true,
+                expires : new Date(Date.now() + 3 * 24 * 60 * 60 * 1000                        //in ms),
+                httpOnly : true,                    //makes client side cookie read only
             }
 
             // res.cookie("token",token,options).status(200).json({
