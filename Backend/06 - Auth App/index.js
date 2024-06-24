@@ -1,6 +1,7 @@
 const express =  require('express');
 const app = express();
-const cookieParser = require('cookie-parser');
+const cookieParser = require('cookie-parser');                    //just like inorder to parse the body of request we use body parser similarly to parse the body
+// if cookie we use cookie-parser
 
 require("dotenv").config();
 
