@@ -80,7 +80,8 @@ exports.login = async (req,res) => {
 
         const payload = {
             email : user.email,
-            id : user._id,
+            id : user._id,                            //here we are sending id because using this we can access data of user from database, because it can be
+            // accessed using cookies given back in response... 
             role : user.role,
         };
 
