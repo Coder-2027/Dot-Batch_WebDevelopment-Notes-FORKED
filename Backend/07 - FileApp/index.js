@@ -13,8 +13,12 @@ const PORT = process.env.PORT || 3000;
 
 //middleware add krne h 
 app.use(express.json());
-const fileUpload = require("express-fileupload");
-app.use(fileUpload({
+const fileUpload = require("express-fileupload");              //express js cannot interact with files so we need to install a third party middleware inorder 
+// to interact with files 
+app.use(fileUpload({                        //using this middleware we will be uploading files on server
+                                                  //difference between fileupload and upload of cloudinary
+  // cloudinary upload , it uploads the file on server then it uploads it on cloudinary then it deletes file from temp storage of server so indirectly it uploads 
+  // the file on clodinary whereas fileupload uploads the file on server
     useTempFiles : true,
     tempFileDir : '/tmp/'
 }));
