@@ -1,18 +1,24 @@
 const File = require("../models/File");
 const cloudinary = require("cloudinary").v2;
 
-//localfileupload -> handler function
+//localfileupload -> handler function                                : it takes the file from client and stores it in some path of server
 
 exports.localFileUpload = async (req, res) => {
     try {
 
         //fetch filefrom request
-        const file = req.files.file;
-        console.log("FILE AAGYI JEE -> ", file);
+        const file = req.files.file;                               //using this file in ln 15
+        console.log("FILE AAGYI JEE -> ", file);                        //from here we know we can find extension of our file from name ...
 
 
         //create path where file need to be stored on server
-        let path = __dirname + "/files/" + Date.now() + `.${file.name.split('.')[1]}`;
+        let path = __dirname + "/files/" + Date.now() + `.${file.name.split('.')[1]}`;                    //here date.now will always create a different name for the file
+                // `.${file.name.split('.')[1]} -> used for defining file format (jpg, jpeg)
+        //but before doing this create a folder named files inside controllers
+        
+        // In Node.js, __dirname is a special variable that provides the absolute path of the directory containing the currently 
+        // executing script. It’s particularly useful for working with file paths, ensuring that your code can reliably locate files relative to the script’s
+        // location, regardless of where the script is executed from.
         console.log("PATH-> ", path)
 
         //add path to the move fucntion
