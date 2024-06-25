@@ -1,3 +1,8 @@
+
+                //here we are gonna to create a an application where a user can upload images and videos, as well as when the data gets uploaded then the user 
+// gets a mail, for storing media we are gonna to use cloudinary server which optimises the process of fetching...
+
+
 //app create
 const express = require("express");
 const app = express();
