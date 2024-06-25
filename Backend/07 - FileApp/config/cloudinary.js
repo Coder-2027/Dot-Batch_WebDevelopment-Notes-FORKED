@@ -4,9 +4,9 @@ require("dotenv").config();
 exports.cloudinaryConnect = () => {
     try{
             cloudinary.config({
-                cloud_name:process.env.CLOUD_NAME,
-                api_key: process.env.API_KEY,
-                api_secret: process.env.API_SECRET,
+                cloud_name:process.env.CLOUD_NAME,                            //open cloudinary > setting > product_info
+                api_key: process.env.API_KEY,                                                    //open cloudinary > setting > api_keys
+                api_secret: process.env.API_SECRET,                                //open cloudinary > setting > api_keys
             })
     }
     catch(error) {
