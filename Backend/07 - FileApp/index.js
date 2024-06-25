@@ -19,7 +19,7 @@ app.use(fileUpload({                        //using this middleware we will be u
                                                   //difference between fileupload and upload of cloudinary
   // cloudinary upload , it uploads the file on server then it uploads it on cloudinary then it deletes file from temp storage of server so indirectly it uploads 
   // the file on clodinary whereas fileupload uploads the file on server
-    useTempFiles : true,
+    useTempFiles : true,                      //else it wasnt shpwing path of file in local serverwhen we printed file object extracted from req.files in controller
     tempFileDir : '/tmp/'
 }));
 //db se connect krnah 
