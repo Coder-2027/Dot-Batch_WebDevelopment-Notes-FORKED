@@ -2,6 +2,7 @@
 .env file structure - 
 MONGODB_URL = "MONGODB_URL"
 PORT = 4000
-CLOUD_NAME = "YOUR Cloud name"
+CLOUD_NAME = "YOUR Cloud name"          smtp.gmail.com          -> mail transfer protocol rules        read about smtp  (foruzan book networking book)
+                                        aws       ->       read about sqs and sns ----> services provided by amazon
 API_KEY = "Your API KEY"
 API_SECRET = "Your API Secrey"
