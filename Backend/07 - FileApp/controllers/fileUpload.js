@@ -46,7 +46,7 @@ function isFileTypeSupported(fileType, supportedTypes) {
 async function uploadFileToCloudinary(file, folder, quality) {
     const options = { folder };
     if (quality) {
-        options.quality = quality;
+        options.quality = quality;                                //here quality parameter is for reducing image or video size
     }
     options.resource_type = "auto"                    //else video wasnt getting uploaded it is for automatically detecting the file type
     return await cloudinary.uploader.upload(file.tempFilePath, options);                    //using file.tempFilePath but before using this we need to include some 
