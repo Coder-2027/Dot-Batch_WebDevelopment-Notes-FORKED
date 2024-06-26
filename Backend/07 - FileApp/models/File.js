@@ -23,7 +23,7 @@ require("dotenv").config();
 // post middleware is used when we want to perform an action just after creating an entry in database similiarly pre middleware is used just before creating entry in
 // database
 
-fileSchema.post("save", async function (doc) {                        //here doc refers to the document saved on database
+fileSchema.post("save", async function (doc) {                        //here doc refers to the document saved on database            -> sending mail when saved
     try {
         console.log("DOC : ", doc)
 
@@ -41,7 +41,7 @@ fileSchema.post("save", async function (doc) {                        //here doc
             from: 'From Priyansh',
             to: doc.email,                            //to the email id supplied in doc
             subject: "New File Uploaded to Cloudinary",
-            html: `<h2>File Uploaded</h2> <br> view now - <a href="${doc.fileUrl}">CLick Here</a>`
+            html: `<h2>File Uploaded</h2> <br> view now - <a href="${doc.fileUrl}">CLick Here</a>`                //mail body
         })
 
         console.log("Info : ", info)
