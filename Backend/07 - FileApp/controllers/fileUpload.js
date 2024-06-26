@@ -48,8 +48,10 @@ async function uploadFileToCloudinary(file, folder, quality) {
     if (quality) {
         options.quality = quality;
     }
-    options.resource_type = "auto"
-    return await cloudinary.uploader.upload(file.tempFilePath, options);
+    options.resource_type = "auto"                    //else video wasnt getting uploaded it is for automatically detecting the file type
+    return await cloudinary.uploader.upload(file.tempFilePath, options);                    //using file.tempFilePath but before using this we need to include some 
+    // flags in fileUpload of index.js, here tempFilePath indicates the local storage created on server from where it is being moved on to the folder created
+    // in cloudinary whose name is codehelp
 }
 
 // image Uploader Handler 
@@ -76,7 +78,8 @@ exports.imageUpload = async (req, res) => {
 
         // Upload to Cloudinary
         const response = await uploadFileToCloudinary(imageFile, "FileApp");
-        console.log(response)
+        console.log(response)                //from here we know that we have an entry of our file inside response.secure_url... this is a url for our entry in 
+        // cloudinary
 
 
         // Upload to DB 
